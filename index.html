@@ -1,0 +1,537 @@
+<html><head><base href="/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GenCyber Summer Camp 2025 - Virginia Military Institute</title>
+<style>
+:root {
+    --primary: #003366;
+    --secondary: #bf9b30;
+    --light: #f5f5f5;
+    --dark: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)),
+                url('/iStock-1281333997.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px; 
+}
+
+
+.cyber-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    opacity: 0.4; 
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: particleFlow 8s linear infinite;
+}
+
+@keyframes particleFlow {
+    0% {
+        transform: translateY(-100%) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%) translateX(20px);
+        opacity: 0;
+    }
+}
+
+/* Add binary rain effect */
+.binary-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2; /* Adjusted opacity */
+    font-family: monospace;
+    font-size: 14px;
+    color: yellow;
+}
+
+.rain-column {
+    position: absolute;
+    top: -20px;
+    animation: rain 4s linear infinite;
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
+.header::after {
+    content: none; /* Removed */
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)),
+                url('/vmi.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.header-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem; /* Increased gap between logos */
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1); /* Enhanced background */
+    padding: 1rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.header-logo {
+    height: 150px; /* Increased from 100px */
+    width: auto;
+    object-fit: contain;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.highlight-box {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-box:hover {
+    transform: translateY(-5px);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #a68628;
+}
+
+.schedule {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.schedule-item {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-time {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.schedule-location {
+    color: var(--secondary);
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <div class="header-logos">
+            <img 
+                src="/vmi logo.png" 
+                alt="A logo for the Virginia Military Institute (VMI)" 
+                class="header-logo"
+                width="150"
+                height="150"
+            >
+            <img 
+                src="/GenCyber_logo.png" 
+                alt="GenCyber logo" 
+                class="header-logo"
+                width="150"
+                height="150"
+            >
+        </div>
+        <h1>GenCyber Summer Camp 2025</h1>
+        <p>Virginia Military Institute, Lexington, VA</p>
+        <p>June 2nd - June 6th, 2025</p>
+    </div>
+</header>
+
+<main class="container">
+    <div class="highlight-box animate-in">
+        <h2>About the Program</h2>
+        <p>Join us for an exciting summer camp at Virginia Military Institute! Funded by the National Security Agency and organized by the Department of Computer and Information Sciences at VMI.</p>
+        <p>GenCyber is a national initiative with the following goals:
+        <ul>
+            <li>Ignite, sustain, and increase awareness of K-12 cybersecurity content and cybersecurity postsecondary and career opportunities for participants.</li>
+            <li>Increase student diversity in cybersecurity college and career readiness pathways at the K-12 level.</li>
+            <li>Facilitate teacher readiness within a teacher learning community to learn, develop, and deliver cybersecurity content for the K-12 classroom in collaboration with other nationwide initiatives.</li>
+        </ul>
+              
+        </p>
+    </div>
+
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="https://www.eventbrite.com/e/gencyber-summer-program-2025-virginia-military-institute-tickets-1107053339339?aff=oddtdtcreator" class="cta-button" target="_blank" rel="noopener noreferrer">Register Now</a>
+    </div>
+    
+    <div class="features-grid">
+        <div class="feature-item">
+            <div class="feature-icon">🔐</div>
+            <h3>Cryptography</h3>
+            <p>Learn about encryption, security protocols, and data protection</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🌐</div>
+            <h3>Cybersecurity Fundamentals</h3>
+            <p>Master the basics of network security and cyber defense</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">📶</div>
+            <h3>Internet of Things</h3>
+            <p>Explore connected devices and smart technology</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🚁</div>
+            <h3>Drone Technology</h3>
+            <p>Get hands-on experience with drone programming and control</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🐍</div>
+            <h3>Python Programming</h3>
+            <p>Learn coding fundamentals with Python</p>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🎮</div>
+            <h3>Game-Based Learning</h3>
+            <p>Learn through interactive cybersecurity games and challenges</p>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h2>What to Expect</h2>
+        <ul>
+            <li>Free (no cost to participants), five-day, face-to-face camp in summer 2025.</li>
+            <li>Hands-On Activities with VMI faculty and guest instructors</li>
+            <li>Real-World Applications of cybersecurity concepts</li>
+            <li>Networking opportunities with leading experts</li>
+            <li>No prior experience required!</li>
+        </ul>
+    </div>
+
+    <div class="schedule animate-in">
+        <h2>Workshop Schedule</h2>
+        
+        <h3>Monday, June 2nd, 2025</h3>
+        <div class="schedule-item">
+            <div class="schedule-time">9:00 AM - 11:00 AM</div>
+            <div class="schedule-title">Welcome, Introduction to team members, orientation and logistics</div>
+            <div class="schedule-title">Cybersecurity Concepts and Ethics</div>
+            <div class="schedule-speaker">Dr. David Smith</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+        
+        <div class="schedule-item">
+            <div class="schedule-time">11:00 AM - 2:00 PM</div>
+            <div class="schedule-title">Essentials of Python </div>
+            <div class="schedule-speaker">Dr. Imran Ghani</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">2:00 PM - 4:00 PM</div>
+            <div class="schedule-title">Cryptography</div>
+            <div class="schedule-speaker">Dr. Sherif AbdelHamid</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <h3>Tuesday, June 3rd, 2025</h3>
+        <div class="schedule-item">
+            <div class="schedule-time">9:00 AM - 11:00 AM</div>
+            <div class="schedule-title">Drone Programming</div>
+            <div class="schedule-speaker">Dr. Sherif AbdelHamid</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">11:00 AM - 2:00 PM</div>
+            <div class="schedule-title">Secure Coding and Safety</div>
+            <div class="schedule-speaker">Dr. Sherif AbdelHamid</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">2:00 PM - 4:00 PM</div>
+            <div class="schedule-title">Agile/Scrum Oriented Airport Security Implementation</div>
+            <div class="schedule-speaker">Dr. Imran Ghani</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <h3>Wednesday, June 4th, 2025</h3>
+        <div class="schedule-item">
+            <div class="schedule-time">9:00 AM - 11:00 AM</div>
+            <div class="schedule-title">IoT Security</div>
+            <div class="schedule-speaker">Dr. Mohamed Azab</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">11:00 AM - 2:00 PM</div>
+            <div class="schedule-title">Network Security</div>
+            <div class="schedule-speaker">Dr. David Feinauer</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">2:00 PM - 4:00 PM</div>
+            <div class="schedule-title">Tabletop Exercise (Ransomware​, Phishing​, Data Exfiltration​)</div>
+            <div class="schedule-speaker">Mr. Amish Parikh</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <h3>Thursday, June 5th, 2025</h3>
+        <div class="schedule-item">
+            <div class="schedule-time">9:00 AM - 11:00 AM</div>
+            <div class="schedule-title">Deepfakes</div>
+            <div class="schedule-speaker">Mr. Amish Parikh</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">11:00 AM - 2:00 PM</div>
+            <div class="schedule-title">Artificial Intelligence and Cybersecurity</div>
+            <div class="schedule-speaker">Dr. Ramoni Lasisi</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+        
+        <div class="schedule-item">
+            <div class="schedule-time">2:00 PM - 4:00 PM</div>
+            <div class="schedule-title">Cybersecurity using Game Cards</div>
+            <div class="schedule-speaker">Jackob and Nathan</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <h3>Friday, June 6th, 2025</h3>
+        <div class="schedule-item">
+            <div class="schedule-time">9:00 AM - 11:00 AM</div>
+            <div class="schedule-title">Internet Fraud, Basic Countermeasures and Ethics</div>
+            <div class="schedule-speaker">High School Teacher (TBD)</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">11:00 AM - 12:00 PM</div>
+            <div class="schedule-title">Careers in Cybersecurity</div>
+            <div class="schedule-speaker">Guest Speaker (TBD)</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">1:00 PM - 2:00 PM</div>
+            <div class="schedule-title">UX, Security Vs. Simplicity</div>
+            <div class="schedule-speaker">Guest Speaker (TBD)</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">2:00 PM - 3:00 PM</div>
+            <div class="schedule-title">VMI Post Tour</div>
+        </div>
+
+        <div class="schedule-item">
+            <div class="schedule-time">3:00 PM - 4:00 PM</div>
+            <div class="schedule-title">Post Camp Survey & Certificates Awards</div>
+            <div class="schedule-location">Marshal Hall</div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h2>Questions</h2>
+        <p>If you have questions, please contact:</p>
+        <ul>
+            <li>Dr. Imran Ghani | 540-464-7845 |          ghanii@vmi.edu</li>
+            <li>Dr. Sherif Abdelhamid | 540-464-7185 | abdelhamidse@vmi.edu</li>
+    </div>
+    
+    
+</main>
+
+<footer style="text-align: center; padding: 2rem; background: var(--primary); color: white; margin-top: 2rem;">
+    <p>© 2025 GenCyber Camp - Virginia Military Institute. All rights reserved.</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.animate-in');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
+
+// Create cyber particles
+function createParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'cyber-particles';
+    
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 8}s`;
+        particlesContainer.appendChild(particle);
+    }
+    
+    document.querySelector('.header').appendChild(particlesContainer);
+}
+
+// Create binary rain effect
+function createBinaryRain() {
+    const rainContainer = document.createElement('div');
+    rainContainer.className = 'binary-rain';
+    
+    for (let i = 0; i < 100; i++) {
+        const column = document.createElement('div');
+        column.className = 'rain-column';
+        column.style.left = `${i * 2}%`;
+        column.style.animationDelay = `${Math.random() * 4}s`;
+        
+        // Create binary string
+        let binaryString = '';
+        for (let j = 0; j < 20; j++) {
+            binaryString += Math.random() > 0.5 ? '1' : '0';
+            binaryString += '<br>';
+        }
+        column.innerHTML = binaryString;
+        
+        rainContainer.appendChild(column);
+    }
+    
+    document.querySelector('.header').appendChild(rainContainer);
+}
+
+// Initialize animations
+document.addEventListener('DOMContentLoaded', function() {
+    createParticles();
+    createBinaryRain();
+});
+</script>
+
+</body></html>
